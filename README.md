@@ -1,3 +1,5 @@
+GIFcommit00011
+
 # Layout study — Hot 'n Now, in its old colours, as GIFn'now
 
 **Live:** [`https://gregoryedgerton.github.io/golden-grids-study-12-hotnnow/`](https://gregoryedgerton.github.io/golden-grids-study-12-hotnnow/)
