@@ -2,7 +2,7 @@ GIFcommit00011
 
 # Layout study — Hot 'n Now, in its old colours, as GIFn'now
 
-**Live:** [`https://gregoryedgerton.github.io/golden-grids-study-12-hotnnow/`](https://gregoryedgerton.github.io/golden-grids-study-12-hotnnow/)
+**Live:** [`https://gregoryedgerton.github.io/golden-grids-study-12-gifnnow/`](https://gregoryedgerton.github.io/golden-grids-study-12-gifnnow/)
 
 An unaffiliated layout study. It rebuilds the five pages of
 [hot-n-now.com](https://www.hot-n-now.com/) (home, menu, about, careers,
@@ -175,3 +175,5 @@ npm run dev
 `npm run build` type-checks and builds to `dist/`; pushing to `main` deploys
 to GitHub Pages. The library is consumed from npm at its published version,
 never linked locally.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-12-hotnnow` to `golden-grids-study-12-gifnnow`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.

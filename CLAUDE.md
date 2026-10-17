@@ -17,7 +17,7 @@ the map; `src/lib/modules.tsx` the flat modules; `src/content.ts` and
 provenance. Read `docs/program/PROGRAM.md`, then `STUDY-BRIEF.md`, then
 `README.md`.
 
-Live at https://gregoryedgerton.github.io/golden-grids-study-12-hotnnow/;
+Live at https://gregoryedgerton.github.io/golden-grids-study-12-gifnnow/;
 pushing to `main` deploys.
 
 ## Rules that are not negotiable
@@ -309,3 +309,5 @@ inert ones; personal-data fields beyond one email box that says nothing is
 sent; personal autofill tokens (`email`, `name`, `given-name`, `family-name`,
 `tel`, `postal-code`, `street-address`, `cc-*`); links to a real login,
 account or application page.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-12-hotnnow` to `golden-grids-study-12-gifnnow`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.
