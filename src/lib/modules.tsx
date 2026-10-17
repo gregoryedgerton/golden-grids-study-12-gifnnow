@@ -30,7 +30,11 @@ export function Prose({ section, inline }: { section: ProseSection; inline?: boo
   );
 }
 
-/** The reference ends every page with a sign-up form. This one sends nothing and says so. */
+/**
+ * The reference ends every page with a mailing-list form asking for name,
+ * phone, ZIP and email. This one keeps a single email box with autofill off,
+ * sends nothing and says so (Safe Browsing remediation, see CLAUDE.md).
+ */
 export function Signup() {
   const [sent, setSent] = useState(false);
   return (
@@ -38,15 +42,11 @@ export function Signup() {
       <div className="wrap signup__card">
         <h2 id="signup-title" className="signup__title">Want the news as it lands?</h2>
         <p className="signup__sub">The restaurant's own list is on its site. This form is a picture of one.</p>
-        <form className="signup__form" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
-          <label>First name<input name="first" autoComplete="given-name" required /></label>
-          <label>Last name<input name="last" autoComplete="family-name" required /></label>
-          <label>Mobile (optional)<input name="mobile" type="tel" autoComplete="tel" /></label>
-          <label>ZIP code<input name="zip" inputMode="numeric" autoComplete="postal-code" required /></label>
-          <label className="signup__wide">Email<input name="email" type="email" autoComplete="email" required /></label>
-          <button className="btn btn--red" type="submit">Submit</button>
+        <form className="signup__form" autoComplete="off" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
+          <label>Email<input name="email" type="email" autoComplete="off" /></label>
+          <button className="btn btn--red" type="submit">Subscribe</button>
         </form>
-        <p className="note" role="status">{sent ? "Nothing was sent: this is a layout study, not the restaurant." : "A form that sends nothing."}</p>
+        <p className="note" role="status">{sent ? "Nothing was sent: this is a layout study, not the restaurant." : "Nothing you type here is sent or stored."}</p>
       </div>
     </section>
   );

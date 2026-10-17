@@ -103,7 +103,7 @@ grid falls back to a plain one and a band of five is dealt into two.
 | Not yet, but soon | from 1 to 3 · top · ccw | 358×537 / 788×525 / 1140×760 |
 
 Flat modules: running text between the grids (`Prose`), the bag, the nine
-questions, the sign-up form.
+questions, the email form (one box, which sends nothing).
 
 ## The subject
 

@@ -167,7 +167,8 @@ README: the smallest line, and that no screen-reader user has tested it.
   wordmark's bolt is the study's own drawing; never trace or embed the chain's
   logo. The two legacy photographs appear only as credited photographs.
 - The order builder (`order.tsx`) shows no prices and sends nothing; the bag is
-  in memory. The apply button links to the restaurant's own careers page.
+  in memory. The apply buttons are labels with no link: the study takes no
+  applications and links to the reference only from the notice and disclosure.
 - Photo captions are marketing copy, cheek allowed; descriptions live only in
   the alt text (`photos.json`). Statistics are large type with a source. Grids
   vary: most bands skip a range with a strip (`plan.ts`).
@@ -284,3 +285,27 @@ opened in StackBlitz at `https://stackblitz.com/~/github.com/gregoryedgerton/gol
 - Do not append `?file=` to the `~/github.com` link; it made the IDE fail to
   start in testing. The classic `/github/` importer accepts `?file=` but waits
   on a WebSocket and can stall at "Cloning repo from GitHub".
+
+## Safe Browsing remediation (2026-10)
+
+On 2026-10-17 Google Safe Browsing flagged the whole origin
+gregoryedgerton.github.io as social engineering (pages that "try to trick
+visitors into sharing personal info"). The first trigger was a demo bank
+sign-in in Study 19; every study then lost anything that looks like
+collecting credentials or personal data. Nothing here ever sent anything; the
+scanner reads the appearance.
+
+**What changed**
+- The closing form on every page (`Signup`, `src/lib/modules.tsx`) asked for
+  first name, last name, mobile, ZIP code and email, each with the browser's
+  autofill token. It is one email box with `autoComplete="off"`, a
+  "Subscribe" button and a note that nothing is sent or stored; the form sits
+  on one row beside its button from 700px up.
+- The order builder's choices (`order.tsx`) carry `autoComplete="off"`. The
+  bag has no checkout and collects nothing.
+
+**Never bring back**: sign-in, log-in or sign-up controls or labels, even
+inert ones; personal-data fields beyond one email box that says nothing is
+sent; personal autofill tokens (`email`, `name`, `given-name`, `family-name`,
+`tel`, `postal-code`, `street-address`, `cc-*`); links to a real login,
+account or application page.

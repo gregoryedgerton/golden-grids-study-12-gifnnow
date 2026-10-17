@@ -39,7 +39,7 @@ function Choice({ legend, options, value, onChange, name }: { legend: string; op
       <div className="pick__row">
         {options.map((o) => (
           <label key={o} className={value === o ? "is-on" : undefined}>
-            <input type="radio" name={name} value={o} checked={value === o} onChange={() => onChange(o)} /><span>{o}</span>
+            <input type="radio" autoComplete="off" name={name} value={o} checked={value === o} onChange={() => onChange(o)} /><span>{o}</span>
           </label>
         ))}
       </div>
@@ -75,7 +75,7 @@ function Builder({ item }: { item: Item }) {
           <div className="pick__row">
             {ADDONS.map((a) => (
               <label key={a} className={addons.includes(a) ? "is-on" : undefined}>
-                <input type="checkbox" checked={addons.includes(a)} onChange={(e) => setAddons(e.target.checked ? [...addons, a] : addons.filter((x) => x !== a))} /><span>{a}</span>
+                <input type="checkbox" autoComplete="off" checked={addons.includes(a)} onChange={(e) => setAddons(e.target.checked ? [...addons, a] : addons.filter((x) => x !== a))} /><span>{a}</span>
               </label>
             ))}
           </div>

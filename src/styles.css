@@ -226,7 +226,7 @@ a.box--strip:focus-visible { outline: 3px solid var(--board); outline-offset: -4
 @media (prefers-color-scheme: dark) { .signup__title { color: #fff; } }
 .signup__sub { margin: 6px 0 18px; font: 500 16px/1.4 var(--font); color: var(--muted); }
 .signup__form { display: grid; gap: 14px 20px; grid-template-columns: minmax(0, 1fr); align-items: end; }
-@media (min-width: 700px) { .signup__form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .signup__wide { grid-column: 1 / -1; } .signup__form .btn { justify-self: end; grid-column: 2; } }
+@media (min-width: 700px) { .signup__form { grid-template-columns: minmax(0, 1fr) auto; } }
 .signup__form label { display: grid; gap: 4px; font: 800 13px/1.2 var(--font); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); }
 .signup__form input { min-height: 46px; padding: 0 2px; font: 600 18px var(--font); color: var(--text); background: transparent; border: 0; border-bottom: 3px solid var(--navy); border-radius: 0; }
 @media (prefers-color-scheme: dark) { .signup__form input { border-bottom-color: var(--gold); } }
